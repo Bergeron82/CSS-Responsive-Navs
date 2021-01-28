@@ -1,0 +1,134 @@
+/* Cassie Williams, nav examples, nav 3 */
+
+nav { font-size: 2.5em;
+    text-align: center;
+    height: 280px;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    margin: 0;
+    position: relative;
+    background-color: rgb(131, 163, 137);
+}
+
+nav ul { 
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: block;
+    width: 100%;
+}
+
+nav ul li {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px 0; 
+    padding: 0;
+    width: 100%;
+}
+
+nav a { 
+    text-decoration: none;
+    color: rgb(72, 84, 95);
+    width: 100%; 
+    padding-left: 0; 
+    display: block;
+    padding: 7px 7px 7px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+nav a:link {
+    color: rgb(197, 197, 197);
+    transition: color 1s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+}
+
+a.current:link, a.current:visited { color: rgb(238, 238, 238); }
+
+span { font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .5em;
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    text-align: center; 
+    -webkit-transition: 0.50s;
+    -moz-transition: 0.50s;
+    transition: 0.50s;
+    display: none;
+    font-weight: bold;
+}
+a:link span { 
+    color: rgb(199, 199, 199);
+    transition: color 1s ease-in-out;
+}
+a:hover span { width: auto; 
+    padding: 5px 0 0 0;
+    overflow: visible; 
+    display: inline-block;
+    color: rgb(238, 238, 238);
+    width: auto; 
+    margin-left: 30px;
+}
+
+
+h1 { height: 2.5em;
+    background-color: rgb(197, 210, 214);
+    padding: 20px 10px 20px 10px;
+    margin-top: 0;
+}
+
+hr { width: 60%; }
+
+#wrapper { background-color: rgb(255, 255, 255);
+    width: 80%; 
+    height: 80em; 
+    margin: auto;
+    border: solid 1px gray;
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) { 
+    nav { height: 280px; }
+
+    nav ul li { display: block;
+        width: 100%; 
+    }
+
+    #wrapper { width: 90%; }
+}
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) 
+{
+    nav { height: 280px; }
+
+    #wrapper { width: 100%; }
+
+    nav ul li { display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 10%;
+    }
+}
+
+@media only screen
+and (min-width : 360px) 
+and (max-width : 740px) {
+    nav { height: 280px; }
+
+    #wrapper { width: 100%; }
+
+    nav ul li { display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 10%;
+    }
+}

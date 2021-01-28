@@ -1,0 +1,142 @@
+/* Cassie Williams, nav examples, nav 5 */
+
+nav { 
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Avenir", sans-serif;
+    height: 32px;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    text-align: right;
+    background-color: rgb(189, 189, 189);
+    text-transform: uppercase;
+}
+
+nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin-right: 4em;
+    padding: 0;
+}
+
+nav a {
+    padding: 0.6em 6px;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgb(61, 83, 90);
+    z-index: 0;
+    cursor: pointer;
+}
+nav a:before, nav a:after { 
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    content: '';
+    background: rgb(61, 83, 90);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+nav a:before { 
+    top: 0px;
+    background-color: rgb(61, 83, 90);
+}
+
+nav a:after { 
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+nav a:hover:before, nav a:hover:after {
+    height: 100%;
+}
+nav .current a {
+   color: rgb(159, 255, 167);
+   opacity: 1;
+}
+
+h1 { 
+    color: rgb(61, 83, 90);
+    padding: 55px 0px 0px 5%;
+    margin-top: 0;
+    float: left;
+    text-transform: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {  margin: 0;
+    padding: 0; 
+    overflow-x: hidden;
+}
+
+main { height: 6em;
+    background-color: rgb(159, 255, 167);
+}
+
+#wrapper { 
+    background-color: rgb(71, 71, 71);
+    width: 100%; 
+    height: 80em; 
+    margin: auto;
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) { 
+    nav { height: 300px; }
+
+    nav li { 
+        display: block;
+        margin: 0 2em 2em; 
+    }
+
+    nav a:before { display: block; }
+
+    #wrapper {width: 100%; }
+}
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) 
+{
+    nav { height: 300px; 
+    }
+
+    nav li { 
+        display: block;
+        margin: 0 2em 2em; 
+    } 
+    
+    nav a { width: 100%;
+        padding-left: 0;
+    }
+
+    #wrapper { width: 100%; }
+
+    nav a:before { display: inline-block; }
+    
+}
+
+@media only screen
+and (min-width : 360px) 
+and (max-width : 740px) {
+    nav { height: 300px; }
+
+    nav li { 
+        display: block;
+        margin: 0 2em 2em; 
+    }
+
+    nav a { width: 100%;
+        padding-left: 0;
+    }
+
+    #wrapper { width: 100%; }
+
+    main { width: 100; }
+
+    nav a:before { display: inline-block; }
+    
+}

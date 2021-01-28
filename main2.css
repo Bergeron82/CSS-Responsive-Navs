@@ -1,0 +1,126 @@
+/* Cassie Williams, nav examples, nav 2 */
+
+nav {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    background-color: rgb(233, 171, 90);
+}
+
+nav ul { 
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li { text-align: center; 
+    padding: 8px;
+    display: inline-block; }
+
+nav a { display: block;
+    text-decoration: none;
+    color: rgb(224, 216, 203);
+    width: 5em;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+nav a:link {
+    color: rgb(190, 190, 190);
+    transition: color 1s ease;
+}
+
+nav a:hover {
+    color: rgb(119, 119, 119);
+    transform: scale(1.5, 1.5);
+}
+
+a.current:link, a.current:visited { color: rgb(119, 119, 119); 
+   
+}
+
+h1 { height: 2em;
+    background-color: rgb(71, 71, 71);
+    padding: 20px 10px 10px 10px;
+    margin-top: 0;
+}
+
+hr { text-align: center; 
+    background-color: rgb(226, 226, 226);}
+
+#wrapper { background-color: rgb(224, 216, 203);
+    width: 80%; 
+    height: 80em; 
+    margin: auto;
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) { 
+    nav { height: 280px;
+    padding-bottom: 2em; }
+
+    nav ul li { display: block;
+        width: 100%; 
+        padding: 8px 0;
+    }
+
+    nav li { margin-bottom: 1px; }
+
+    nav a { width: 100%; 
+    padding-left: 0; 
+    } 
+    #wrapper { width: 90%; }
+}
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) 
+{
+    nav { height: 280px; }
+
+    nav a { width: 100%;
+        padding-left: 0;
+    }
+
+    #wrapper { width: 100%; }
+
+    nav ul li { display: block;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    main { width: 100; }
+
+    h1 { margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen
+and (min-width : 360px) 
+and (max-width : 740px) {
+    nav { height: 280px; }
+
+    nav a { width: 100%;
+        padding-left: 0;
+    }
+
+    #wrapper { width: 100%; }
+
+    nav ul li { display: block;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    main { width: 100; }
+
+    h1 { margin-left: auto;
+        margin-right: auto;
+    }
+}
